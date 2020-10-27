@@ -1,0 +1,267 @@
+
+
+CSS Selector in Selenium ::
+
+Cascaded Style Sheet ::
+
+1. id :: #valueofidlocator
+
+#email
+
+2. id and tagname :: tagname#valueofidlocator
+
+input#email
+
+3. class :: .valueofclasslocator
+
+.inputtext.login_form_input_box
+
+4. class and tagname :: tagname.valueofclasslocator
+
+input.inputtext.login_form_input_box
+
+5. id and class :: .valueofclasslocator#valueofidlocator OR #valueofidlocator.valueofclasslocator
+
+#email.inputtext.login_form_input_box
+
+6. id and class and tagname :: tagname.valueofclasslocator#valueofidlocator OR tagname#valueofidlocator.valueofclasslocator
+
+#email.inputtext.login_form_input_box
+
+7. CSS Selector using other than id and class ::
+
+name :: tagname[name='valueofnamelocator'] ==> input[name='email']
+
+id :: tagname[id='valueofnamelocator'] ==> input[id='email']
+
+8. starts-with :: ^ :: tagname[nameoflocator^='startingvalueofnamelocator']
+
+input[name^='first']
+
+9. ends-with :: $ :: tagname[nameoflocator='endingvalueofnamelocator']
+
+input[name$='Name']
+
+10. contains :: * :: tagname[nameoflocator*='somevalueoflocator']
+
+input[data-testid*='_email']
+
+11. table > tbody > tr > td > input
+
+Xpath VS CSSSelector ::
+
+1.
+2.
+3. preceding/following
+4. text() :: //span[text()='Create an account']
+5. ends-with :: css
+
+Locating web element ::
+
+1. findElement(By.cssSelector("")) ::
+
+WebElement userId = findElement(By.id("email")); // NoSuchElementException
+
+WebElement password = findElement(By.id("email"));
+
+2. findElements(By.cssSelector("")) ::
+
+List<WebElement> elementsList = findElements(By.xpath("//input[@class='inputtext login_form_input_box']")); // 2
+
+WebElement Commands ::
+
+Waits in Selenium – Implicitly, Explicitly, Fluent Wait ::
+
+Implicitly ::
+
+driver.manage().timeouts().implicitlywait(time, timeunit);
+
+5 sec
+
+2
+
+Explicitly / webdriverwait::
+
+WebDriverWait wait = new WebDriverWait(driver, 5); // seconds
+
+wait.until(ExpectedConditions.visibilityofElement(WebElement ele));
+
+
+500 milliseconds
+
+5000
+
+1 sec = 1000 mseconds
+
+FluentWait ::
+
+FluentWait<WebDriver> wait = new FluentWait<>(driver).withTimeout(withtime, withtimeUnit)
+
+                .pollingEvery(pollingtime, pollingtimeUnit);
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+
+
+Handling Scroll ::
+
+JavaScriptExecutor ::
+
+executeScript()::
+
+jse.executeScript("window.scrollTo(0, 500)");
+
+
+jse.executeScript("scrollBy(0, -500)");
+
+
+Handling Dropdown ::
+
+Select ::
+
+WebElement countryDropdown = driver.findElement(By.xpath("//select[@name='country']");
+
+Select s = new Select(countryDropdown);
+
+s.selectByValue("CHINA");
+s.selectByVisibleText("CHINA");
+s.selectByIndex(1);
+
+Handling Links ::
+
+<a> :: Anchor Tag
+
+get all links in page ::
+
+tagName("a");
+
+
+Alert alert = driver.switchTo().alert();
+
+alert.accept();
+alert.dismiss();
+String message = alert.getText();
+alert.sendKeys("Hello prompt alert");
+
+Handling iframes ::
+
+driver.switchTo().frame(WebElement ele);
+
+driver.switchTo().frame(String id);
+
+driver.switchTo().frame(String name);
+
+driver.switchTo().frame(String xpath);
+
+driver.switchTo().frame(int index);
+
+
+
+driver.switchTo().frame("pf");
+
+driver.switchTo().frame("f1");
+
+perform task in f1
+
+driver.switchTo().defaultContent();
+
+driver.switchTo().parentFrame();
+
+perform task in pf
+
+driver.switchTo().frame("f2");
+
+perform task in f2
+
+driver.switchTo().parentFrame();
+
+perform task in pf
+
+driver.switchTo().defaultContent();
+
+Handling Multiple Browser Windows ::
+
+String pid = driver.getWindownHandle() :: gets the id of the current active
+
+Set<String> ids = driver.getWindownHandles();
+
+
+Handling Web/HTML Tables ::
+
+Handling Mouse Actions –
+
+Actions actions = new Actions();
+
+actions.contextClick().click().moveToElement().build().perform();
+
+Right Click :: Context click ::
+
+Double Click ::
+
+Mouse Hover ::
+
+Drag and Drop ::
+
+Handling Key Board Actions ::
+
+TestNG ::
+
+@Test ::
+
+@BeforeMethod
+@AfterMethod
+
+@Test(........)
+
+@DataProvider
+
+
+ar[1][1] = 3
+
+Page Object Model ::
+
+Page Factory Model ::
+
+
+WebElement userId = driver.findElement(By.id("dsfsfd"));
+
+List<WebElement> listOfElements = driver.findElements(By.id("dsfsfd"));
+
+Maven ::
+
+pom.xml => Project Object Model
+
+Maven Build Cycle ::
+
+Phases ::
+
+validate: validate the project is correct and all necessary information is available
+compile: compile the source code of the project
+test: test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+package: take the compiled code and package it in its distributable format, such as a JAR.
+integration-test: process and deploy the package if necessary into an environment where integration tests can be run
+verify: run any checks to verify the package is valid and meets quality criteria
+install: install the package into the local repository, for use as a dependency in other projects locally
+deploy: done in an integration or release environment, copies the final package to the remote repository for sharing with other developers and projects.
+
+There are two other Maven lifecycles of note beyond the default list above. They are
+
+clean: cleans up artifacts created by prior builds
+site: generates site documentation for this project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,792 @@
+
+Name :: Java
+
+Version :: 8/1.8
+
+Release Year :: 2010
+
+R&D :: Oracle
+
+Data Types ::
+
+1. byte :: 0, 1  :: 0 = 0000, 1 = 0001, 2 = 0010........... 10 :: 0 :: 1 byte
+
+2. short :: 0 :: 2 bytes :: 0,1,2,3,4,45
+
+3. int :: 0 :: 4 bytes :: 12234455
+
+4. long :: l/L :: 0L :: 8 bytes :: 1234L
+
+5. float :: f/F :: 0.0f/0.0F :: 4 bytes :: 1234.56f, 9876f, 4536F
+
+6. double :: d/D :: 0.0d/0.0D :: 8 bytes :: 1234567.98d, 98765432.55D, 987654d
+
+7. char :: 'a' :: \u0000
+
+8. boolean :: true, false :: false
+
+--------------------------------------
+
+10-12/b
+
+Java 1.8
+
+Selenium
+
+String :: java.lang
+
+"Chandra", "1234"
+
+--------------------------------------
+
+Variable :: A temporary memory location to store a single value at a time.
+
+datatype nameofvariable = valueofvariable;
+
+String name = "Selenium Course";
+
+int rno = 10;
+
+Types of Variable ::
+
+1. Local Variable :: If a variable is declared inside a method.
+2. Instance Variable :: If a variable is declared inside a class and outside a method.
+3. Static Variable :: If a variable is declared inside a class and outside a method with static keyword.
+
+Control Statements ::
+
+1. Conditional Statements ::
+
+    i. if ::
+
+        if(condition) {
+               -----
+               -----
+               -----
+        } else {
+               -----
+               -----
+               -----
+        }
+
+        exam system ::
+
+        >= 35 :: passed
+        else :: failed
+
+    ii. else if ::
+
+        if(condition_1) {
+               -----
+               -----
+               -----
+        } else if(condition_2) {
+             -----
+             -----
+             -----
+        } else if (condition_3){
+            -----
+            -----
+            -----
+        } else {
+
+        }
+
+
+    iii. switch case ::
+
+
+    switch(expression){
+        case value1 :
+            sout();
+            break;
+        case value2:
+              sout();
+              break;
+        default:
+            sout();
+    }
+
+
+
+
+
+
+method return type ::
+
+
+
+m1();
+
+m2();
+
+
+2. Looping Statements ::
+    1. for ::
+
+    int i = 1; // initialisation
+    i <= 10; // condition
+    i++/i-- // increment/decrement
+
+    for(initialisation; condition; increment/decrement) {
+        ------
+        ------
+    }
+
+    for(int i = 1; i <= 10; i++){
+        System.out.println(i);
+    }
+
+
+    2. while :: as long as condition is true
+
+    int i = 1;
+
+    while(i <= 10){
+        System.out.println(i);
+        i++;
+    }
+
+
+    3. do while :: as long as condition is true, but want to execute block of code atleast one time
+                    before checking condition.
+
+    int i = 1;
+
+    do{
+        System.out.println(i);
+        i++;
+    }
+    while(i <= 10);
+
+
+    break ::
+    continue;
+
+Array ::
+
+1. multiple data
+2. declare number of data
+3. same type of data
+4. Duplicate data
+5. index, 0, size-1;
+
+syntax ::
+
+datatype nameofarray[] = new datatype[size]; ==> int arr1[] = new int[5];
+
+datatype[] nameofarray = new datatype[size]; ==> int[] arr1 = new int[5];
+
+datatype[] nameofarray = {1,2,3,4,5,6}; ==> int[] arr2 = {1,2,3,4,5};
+
+datatype[] nameofarray;
+
+nameofarray = new datatype[size];
+
+Inserting data in array ::
+
+arr1[0] = 10;
+arr1[1] = 20;
+arr1[2] = 30;
+arr1[3] = 40;
+arr1[4] = 50;
+
+
+String :: java.lang
+
+"sadsada1313215^%^@%$@$@$%$"
+
+immutable ::
+
+ways to create a string ::
+
+2 ways ::
+1. by using string literal ::
+
+String str = "Selenium with Java";
+
+2. by using new keyword ::
+
+String str2 = new String("Selenium with Python");
+
+Methods ::
+
+"Java"
+ index, 0, length - 1
+
+Oops ::
+
+Object ::
+
+ClassName referenceVarName = new ClassName();
+
+Student chandra = new Student();
+
+Class ::
+
+Constructor ::
+1. Special type of method which does not have return type.
+2. Name of constructor must be same as name of the class.
+
+Types of Constructor ::
+
+1. Default ::
+2. Parameterised ::
+
+
+Inheritance :: extends :: Is A relationship :: Dog Is A Animal   Cat Is A Animal
+
+class A {
+
+
+} :: Parent
+
+class B extends A {} :: Child
+
+
+1. Single ::
+2. Hierarchical ::
+3. Multi level ::
+4. Multiple ::
+5. Hybrid ::
+
+
+Animal {
+
+    eat(){}
+    walk(){}
+    Run(){}
+
+}
+
+
+
+Dog{
+
+play(){}
+bark(){}
+
+}
+
+
+Cat {
+
+meow(){}
+
+
+}
+
+
+Abstraction :: Hiding implementation details and showing functionality to the end user.
+
+1. Abstract class :: 100% not possible.
+
+abstract class Test {
+
+// Abstract methods :: if method is declared using abstract keyword and no body.
+
+abstract void m1();
+
+// non-abstract / concrete methods :: method with body
+
+void m2(){
+
+}
+
+}
+
+
+2. Interface :: 100% possible
+
+interface TestInterface {
+
+// only abstract methods
+void m1();
+
+// java 1.8 onwards
+static and default methods
+
+
+}
+
+
+class Test implements TestInterface {
+
+void m1(){
+
+}
+
+}
+
+
+Exception Handling ::
+
+Types of Exceptions ::
+1. Compile time / Checked exception ::
+2. Run time / Unchecked exception ::
+
+Exception ::
+
+try....catch blocks ::
+
+
+try{
+
+ int[] arr1 = new int[5];
+
+        arr1[0] = 10;
+        arr1[1] = 20;
+        arr1[2] = 30;
+        arr1[3] = 40;
+        arr1[4] = 50;
+        arr1[5] = 60;
+
+}
+catch(ArrayIndexOutOfBoundsException e){
+    e.printStackTrace();
+}
+
+
+nested try catch blocks ::
+
+try{
+
+ int[] arr1 = new int[5];
+
+        try{
+        arr1[0] = 10;
+        arr1[1] = 20;
+                arr1[2] = 30;
+                arr1[3] = 40;
+                arr1[4] = 50;
+                arr1[5] = 60;
+        } catch(){
+
+        }
+
+}
+catch(ArrayIndexOutOfBoundsException e){
+    e.printStackTrace();
+     try{
+            arr1[0] = 10;
+            arr1[1] = 20;
+                    arr1[2] = 30;
+                    arr1[3] = 40;
+                    arr1[4] = 50;
+                    arr1[5] = 60;
+            } catch(){
+
+            }
+}
+
+
+try .... finally block ::
+
+
+  try{
+  int[] arr1 = new int[5];
+            arr1[0] = 10;
+            arr1[1] = 20;
+                    arr1[2] = 30;
+                    arr1[3] = 40;
+                    arr1[4] = 50;
+                    arr1[5] = 60;
+  } finally(){
+    arr1 = null;
+  }
+
+
+try{
+
+ int[] arr1 = new int[5];
+
+        arr1[0] = 10;
+        arr1[1] = 20;
+        arr1[2] = 30;
+        arr1[3] = 40;
+        arr1[4] = 50;
+        arr1[5] = 60;
+
+}
+catch(ArrayIndexOutOfBoundsException e){
+    e.printStackTrace();
+}
+finally(){
+    arr1 = null;
+}
+
+throws ::
+
+throw ::
+
+User Defined Exceptions :: Custom Exceptions ::
+
+india :: 40
+
+18
+
+Exception
+
+class CustomException extends Exception {
+
+
+}
+
+
+QTP ::
+
+Selenium WebDriver ::
+
+Bar Codes, OTP, Captcha ::
+
+Desktop ::
+
+
+Components ::
+
+Selenium IDE ::
+Selenium Remote Control ::
+Selenium WebDriver :: 2.0
+
+Architecture ::
+
+seleniumhq.org
+
+WebDriver :: ChromeDriver, FirefoxDriver, InternetExplorerDriver
+
+System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+WebDriver driver = new ChromeDriver();
+
+System.setProperty("webdriver.gecko.driver","drivers/geckodriver.exe");
+WebDriver driver = new FirefoxDriver();
+
+System.setProperty("webdriver.ie.driver","drivers/IEDriverServer.exe");
+WebDriver driver = new InternetExplorerDriver();
+
+
+driver.manage().window().maxmise();
+
+Browser Commands ::
+
+get(String url);
+
+String title = driver.getTitile();
+
+String pageSource = driver.getPageSource();
+
+String cUrl = driver.getCurrentUrl();
+
+driver.close();
+driver.quit();
+
+Browser Navigation Commands ::
+
+Locators in Selenium ::
+
+a. Id ::
+b. Name ::
+c. className ::
+d. LinkedText ::
+e. PartialLinkedText ::
+f. TagName ::
+g. Xpath ::
+h. CssSelector ::
+
+
+DOM :: Document Object Model ::
+
+
+Forgotten account?
+
+Anchor ::
+
+driver.findElement(By.id("email"));
+driver.findElement(By.name("email"));
+driver.findElement(By.class("email"));
+driver.findElement(By.linkedText("email"));
+driver.findElement(By.partialLinkedText("email"));
+driver.findElement(By.tagName("email"));
+driver.findElement(By.xpath("email"));
+driver.findElement(By.cssSelector("email"));
+
+
+Xpath in Selenium ::
+
+    Absolute Xpath ::
+
+    /html/body/div[1]/div[2]/div/div/div/div/div[2]/form/table/tbody/tr[2]/td[1]/input
+
+    Relative Xpath ::
+
+1. //tagname[@loactor='valueofthelocator']
+
+<input type="email" class="inputtext login_form_input_box_email" name="email" id="email" data-testid="royal_email">
+
+<input type="password" class="inputtext login_form_input_box_pass" name="pass" id="pass" data-testid="royal_pass">
+
+//input[@id='email'][@name='email'][@class='inputtext login_form_input_box']
+
+//input[@id='email' and @name='email' and @class='inputtext login_form_input_box']
+
+//input[@id='email' or @name='email']
+
+
+2. contains() ::
+
+//tagname[contains(@loactor,'partofvalueofthelocator')]
+
+//input[contains(@id, 'ema')]
+
+//input[contains(@data-testid, '_email')]
+
+
+<span>Create an account</span>
+
+3. text() ::
+
+//tagname[text()='textgiven']
+
+//div[text()='Facebook helps you connect and share with the people in your life.']
+
+
+<div class="_5iyx">Facebook helps you connect and share with the people in your life.</div>
+
+//div[@class='_5iyx']
+
+4. text() and contains() ::
+
+<div>Facebook helps you connect and share with the people in your life.</div>
+
+//tagname[contains(text(),'partofvalueofthelocator')]
+
+//div[contains(text(), 'connect and share')]
+
+5. starts-with() ::
+
+<input maxlength="60" name="firstName" size="20">
+
+<input maxlength="60" name="lastName" size="20">
+
+//tagname[starts-with(@locator,'startingvalue')]
+
+//input[starts-with(@name,'last')]
+
+6. preceding , following ::
+
+//input[@id='pass']/preceding::input[1] --- to locate previous element
+
+//input[@id='pass']/following::input[1] --- to locate next element
+
+
+CssSelector in Selenium ::
+
+Cascaded Style Sheet ::
+
+1. id :: #valueofidlocator
+
+#email
+
+2. id and tagname :: tagname#valueofidlocator
+
+input#email
+
+3. class :: .valueofclasslocator
+
+.inputtext.login_form_input_box
+
+4. class and tagname :: tagname.valueofclasslocator
+
+input.inputtext.login_form_input_box
+
+5. id and class :: .valueofclasslocator#valueofidlocator OR #valueofidlocator.valueofclasslocator
+
+#email.inputtext.login_form_input_box
+
+6. id and class and tagname :: tagname.valueofclasslocator#valueofidlocator OR tagname#valueofidlocator.valueofclasslocator
+
+tagname#email.inputtext.login_form_input_box
+
+7. CSS Selector using other than id and class ::
+
+input[data-testid=\"royal_email\"]
+
+name :: tagname[name='valueofnamelocator'] ==> input[name='email']
+
+id :: tagname[id='valueofnamelocator'] ==> input[id='email']
+
+8. starts-with :: ^ :: tagname[nameoflocator^='startingvalueofnamelocator']
+
+input[name^='first']
+
+9. ends-with :: $ :: tagname[nameoflocator$='endingvalueofnamelocator']
+
+input[name$='Name']
+
+10. contains :: * :: tagname[nameoflocator*='somevalueoflocator']
+
+input[data-testid*='_email']
+
+11. Parent child tag relation ::
+    table > tbody > tr > td > input
+
+
+Xpath VS CSSSelector ::
+
+1. cssSelector locates elements bit faster than xpath
+2. xpath :: gc, mff; csssele :: ie
+3. xpath :: preceding/following :: csssle :: farword - table > tbody > tr > td > input
+4. xpath :: text() :: //span[text()='Create an account']
+5. ends-with :: css
+
+Locate webelements ::
+
+By userName = By.xpath("//input[@id='pass']/following::input[1]");
+
+1. findElement(By.xpath(""))::
+
+ WebElement userId = driver.findElement(By.id("email"));
+
+ WebElement userId = driver.findElement(By.id("chandra")); // NoSuchElementException
+
+ driver.findElement(By.className("inputtext login_form_input_box"));
+
+2. findElements(By.id("email")) ::
+
+List<WebElement> list = driver.findElements(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-']"));
+
+List<WebElement> list2 = driver.findElements(By.id("chandra"));
+
+
+WebElement Commands ::
+
+
+WebElement userId = driver.findElement(By.id("email"));
+
+Waits in Selenium ::
+
+1. Implicitly ::
+
+    launch browser ::
+
+    WebDriver driver = new ChromeDrvier();
+    driver.manage().timeOuts().implicitlyWait(5, SECONDS); // 2 sec
+
+    driver.get("facebook url");
+    driver.findElement(By.id("email")); nosuchelementexception
+    driver.findElements(By.id("email"));
+
+Explicitly
+1. WebDriverWait :: 5 seconds / 5000 ms = 10 intervals
+    1. Seconds
+    2. 500 milliseconds ::
+    3. Depends on condition ::
+
+
+    WebDriverWait wait = new WebDriverWait(driver, 5);
+    wait.until(ExpectedConditions.visibilityofElement(WebElement ele));
+
+2. FluentWait ::
+
+FluentWait<WebDriver> wait = new FluentWait<>(driver)
+    .withTimeout(10, TimeUnit.SECONDS)
+    .pollingEvery(2, TimeUnit.SECONDS);
+wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//span[text()='Create an account']")));
+
+for(datatype var : arrayname){
+        soutpl(var);
+}
+
+Handling links ::
+
+Handling Scroll ::
+
+Handling dropdown ::
+
+Handling Checkbox and Radio buttons ::
+
+Handling Popup Alerts ::
+
+Handling iframes ::
+
+Handling Multiple Browser Windows ::
+
+
+10
+
+(10, 20)
+
+(20)
+
+s.remove(10);
+
+driver.switchTo().window(id);
+
+
+Handling Mouse Actions – Right Click, Double Click, Mouse Hover, Drag and Drop ::
+
+Actions act = new Actions(driver);
+
+act.contextClick(WebElement ele);
+
+act.doubleClick(WebElement ele).build().perform();
+
+act.moveToElement(WebElement ele).build().perform();
+
+act.dragAndDrop(WebElement source, WebElement target).build().perform();
+
+act.clickAndHold(WebElement source).moveToElement(WebElement target).release(WebElement target).build().perform();
+
+
+Handling Key Board Actions ::
+
+act.keyDown(keys.SHIFT).sendKeys(WebElement ele, "chandra").keyUp(keys.SHIFT).build().perform();
+
+
+Handling Web Tables ::
+
+HTML ::
+
+Exceptions in Selenium ::
+
+TestNG Framework ::
+
+Annotations ::
+
+@Test(parameters)
+
+testng.xml
+
+Inheritance ::
+
+login()
+inbox()
+dropmail()
+sentmail()
+logout()
+
+
+grouping methods ::
+
+
+@DataProvider ::
+
+Object[][]
+
+By userId1 = By.xpath("//input[@name='userName']");
+
+@FindBy
+
+@FindBys
+
+
+Maven SetUp ::
+
+
+
+
+
+
+
+
+
+
